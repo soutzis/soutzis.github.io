@@ -1,0 +1,24 @@
+title: Soutzis Cyber Security
+description: Portfolio, blog, and projects
+url: "https://cyber-security.com.cy/"
+baseurl: ""
+
+theme: just-the-docs
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-default-layout
+
+search_enabled: true
+heading_anchors: true
+nav_enabled: true
+color_scheme: nil
+aux_links_new_tab: true
+permalink: /blog/:title/
+
+aux_links:
+  GitHub:
+    - "https://github.com/soutzis/"
+  LinkedIn:
+    - "https://www.linkedin.com/in/petrossoutzis/"
