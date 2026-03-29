@@ -1,11 +1,16 @@
-title: Soutzis Cyber Security
+title: Soutzis Cybersecurity
 description: Portfolio, blog, and projects
 url: "https://cyber-security.com.cy/"
 baseurl: ""
 
-theme: just-the-docs
+author:
+  name: Petros Soutzis
+  email: psoutzis@cyber-security.com.cy
+
+remote_theme: just-the-docs/just-the-docs
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-default-layout
