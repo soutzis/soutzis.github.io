@@ -44,5 +44,5 @@ detection mechanisms.
 
 ---
 
-Want to talk about a specific challenge? [Email me]({{ 'mailto:' | append: site.links.email }})
+Want to talk about a specific challenge? [Email us]({{ 'mailto:' | append: site.links.email }})
 or [connect on LinkedIn]({{ site.links.linkedin }}).
