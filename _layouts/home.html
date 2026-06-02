@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow reveal">
+        <span>Penetration Testing</span>
+        <span>Security Awareness</span>
+        <span>Attack Surface Mapping</span>
+      </div>
+      <h1 class="hero-title reveal">Find the gap<br>before <span class="accent">they do.</span></h1>
+      <p class="hero-sub reveal">Our team at cyber-security.com.cy knows how real attackers operate. We apply our no-nonsense mentality to all engagements and work together with our clients for all their security needs. <b>Senior practitioners only, on every engagement.</b></p>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="#contact">Start a conversation &rarr;</a>
+        <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Read the blog</a>
+      </div>
+    </div>
+
+    <div class="panel reveal" aria-hidden="true">
+      <div class="panel-head">
+        <span class="lights"><i></i><i></i><i></i></span>
+        <span class="ttl">engagement.log &mdash; live</span>
+      </div>
+      <div class="term" id="term"></div>
+    </div>
+  </section>
+</div>
+
+<div class="strip reveal">
+  <div class="wrap">
+    <span class="badge">The difference</span>
+    <p><b>No juniors. No blind guesswork. No rushed and bloated reports with nonsensical findings.</b> Every assessment is run by experienced specialists.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="services">
+    <div class="sec-label reveal">01 &mdash; Services</div>
+    <h2 class="reveal">Adversarial security, end to end.</h2>
+    <p class="lead reveal">You can reach out about virtually any cyber security project. These are our most common engagements for our clients.</p>
+    <div class="grid-svc cols-3">
+      <div class="svc reveal"><div class="num">001</div><h3>Penetration Testing</h3><p>Realistic, goal-driven attacks against your networks, infrastructure, and applications &mdash; identifying business-logic failures that scanners cannot detect.</p></div>
+      <div class="svc reveal"><div class="num">002</div><h3>Attack Surface Mapping</h3><p>Discover forgotten development sites or sensitive services that are publicly exposed.</p></div>
+      <div class="svc reveal"><div class="num">003</div><h3>Security Training</h3><p>Phishing, pretexting, and physical assessments that test the human layer your technical controls quietly depend on.</p></div>
+      <div class="svc reveal"><div class="num">004</div><h3>Physical Security Assessment</h3><p>So you installed CCTV and put on fences. Ever wondered how hard it would be for someone to get inside?</p></div>
+      <div class="svc reveal"><div class="num">005</div><h3>Secure Configuration Review</h3><p>We find the most common pitfalls in your local and cloud environments for you.</p></div>
+      <div class="svc reveal"><div class="num">006</div><h3>Incident Response</h3><p>Breaches happen even to the most prepared. It's best to leave it to teams who do this for a living.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-label reveal">02 &mdash; About</div>
+    <div class="about-grid">
+      <div>
+        <h2 class="reveal">Built for the people who can't afford to get this wrong.</h2>
+      </div>
+      <div>
+        <p class="lead reveal" style="margin-top:0">We offer flexible, clear contracts and startup-ready pricing. Get notified about critical findings instantly and get your reports on time, without having to go through an army of sales reps and account managers.</p>
+        <ul class="focus-list reveal">
+          <li>Penetration Testing <span>core</span></li>
+          <li>Security Awareness Training <span>human layer</span></li>
+          <li>Attack Surface Mapping <span>engineers &middot; developers</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="sec-label reveal">03 &mdash; Selected Work</div>
+    <h2 class="reveal">Projects &amp; research.</h2>
+    <p class="lead reveal">Tooling, write-ups, and open-source work. <a class="placeholder-note" href="{{ '/projects/' | relative_url }}">&#8627; See all projects</a></p>
+    <div class="grid-svc" style="margin-top:36px">
+      <a class="svc reveal" href="{{ site.links.github }}"><div class="num">PRJ</div><h3>Open-source tooling</h3><p>Scripts and security tooling published on GitHub. Browse the repositories, contributions, and research.</p></a>
+      <a class="svc reveal" href="{{ '/projects/' | relative_url }}"><div class="num">PRJ</div><h3>Engagement examples</h3><p>Sanitised, NDA-safe summaries of representative assessments across fintech and banking clients.</p></a>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="sec-label reveal">04 &mdash; Writing</div>
+    <h2 class="reveal">From the blog.</h2>
+    <p class="lead reveal">Everything-cybersecurity.</p>
+    <div class="posts">
+      {% assign latest = site.posts | slice: 0, 4 %}
+      {% for post in latest %}
+      <a class="post reveal" href="{{ post.url | relative_url }}">
+        <span class="date">{{ post.date | date: '%Y &middot; %m' }}</span>
+        <span class="ptitle">{{ post.title }}
+          <span class="excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</span>
+          {% if post.tags and post.tags.size > 0 %}<span class="tags">{{ post.tags | join: ' / ' }}</span>{% endif %}
+        </span>
+        <span class="arrow">&rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-label reveal">05 &mdash; Contact</div>
+    <div class="contact reveal">
+      <h2>Have a system you want tested properly?</h2>
+      <p class="lead" style="margin-top:18px">The easiest way to reach us is by email, or via IM (number only on our physical business card).</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:{{ site.links.email }}">{{ site.links.email }}</a>
+        <a class="btn btn-ghost" href="{{ site.links.linkedin }}" rel="noopener" target="_blank">LinkedIn</a>
+        <a class="btn btn-ghost" href="{{ site.links.github }}" rel="noopener" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</div>

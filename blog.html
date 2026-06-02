@@ -1,0 +1,31 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: A blog for everything-cybersecurity and the occasional ranting — by Petros Soutzis.
+---
+<div class="wrap">
+  <header class="page-head">
+    <div class="sec-label reveal">Writing</div>
+    <h1 class="reveal">From the blog.</h1>
+    <p class="lead reveal">Posts on cybersecurity and life.</p>
+  </header>
+
+  {% if site.posts.size == 0 %}
+  <p class="lead">Posts are on the way. In the meantime, connect with me on
+    <a href="{{ site.links.linkedin }}" style="color:var(--signal)">LinkedIn</a>.</p>
+  {% else %}
+  <div class="posts" style="margin-top:40px">
+    {% for post in site.posts %}
+    <a class="post reveal" href="{{ post.url | relative_url }}">
+      <span class="date">{{ post.date | date: '%Y &middot; %m' }}</span>
+      <span class="ptitle">{{ post.title }}
+        <span class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</span>
+        {% if post.tags and post.tags.size > 0 %}<span class="tags">{{ post.tags | join: ' / ' }}</span>{% endif %}
+      </span>
+      <span class="arrow">&rarr;</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

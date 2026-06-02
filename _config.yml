@@ -1,29 +1,49 @@
-title: Cyber Security by psoutzis
-description: Portfolio, blog, and projects related to cyber security; based in Cyprus.
-url: "https://cyber-security.com.cy/"
+title: We find it first.
+tagline: Cyber Security Consulting Services
+description: >-
+  Independent cyber security consultancy based in Cyprus. Penetration testing, API security reviews,
+  Security Awareness trainings, Attack Surface Mapping, and more.
+url: "https://cyber-security.com.cy"
 baseurl: ""
+lang: en
 
 author:
   name: Petros Soutzis
   email: psoutzis@cyber-security.com.cy
 
-remote_theme: just-the-docs/just-the-docs
+# Social / contact
+links:
+  github: "https://github.com/soutzis"
+  linkedin: "https://www.linkedin.com/in/petrossoutzis/"
+  email: "info@cyber-security.com.cy"
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-default-layout
+  - jekyll-sitemap
 
-search_enabled: true
-heading_anchors: true
-nav_enabled: true
-color_scheme: nil
-aux_links_new_tab: true
+# Blog posts live under /blog/:title/
 permalink: /blog/:title/
 
-aux_links:
-  GitHub:
-    - "https://github.com/soutzis/"
-  LinkedIn:
-    - "https://www.linkedin.com/in/petrossoutzis/"
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .idea
