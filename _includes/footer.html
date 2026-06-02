@@ -1,6 +1,11 @@
 <footer>
   <div class="wrap">
-    <span class="fb">&copy; {{ site.time | date: '%Y' }} PETROS SOUTZIS &middot; CYBER-SECURITY.COM.CY</span>
-    <span class="fb">Built on GitHub Pages &middot; <a href="{{ site.links.github }}" rel="noopener" target="_blank">@soutzis</a></span>
+    <a class="brand footer-brand" href="{{ '/' | relative_url }}" aria-label="cyber-security.com.cy home">
+      {% include logo.html tagline=true %}
+    </a>
+    <div class="foot-meta">
+      <span class="fb">&copy; {{ site.time | date: '%Y' }} CYBER-SECURITY.COM.CY &middot; Cyprus</span>
+      <span class="fb">Built on GitHub Pages &middot; <a href="{{ site.links.github }}" rel="noopener" target="_blank">@soutzis</a></span>
+    </div>
   </div>
 </footer>
