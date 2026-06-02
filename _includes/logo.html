@@ -1,0 +1,10 @@
+{%- comment -%} Terminal wordmark — adapted from the "A · Terminal" logo exploration.
+Usage: {% include logo.html %}  or  {% include logo.html tagline=true %} {%- endcomment -%}
+<span class="logo-term">
+  <span class="logo-line">
+    <span class="logo-prompt">$</span><span class="logo-name">cyber-security</span><span class="logo-dim">.com</span><span class="logo-tld">.cy</span><span class="logo-caret" aria-hidden="true"></span>
+  </span>
+  {%- if include.tagline %}
+  <span class="logo-sub">Penetration Testing &middot; Security Reviews</span>
+  {%- endif %}
+</span>
