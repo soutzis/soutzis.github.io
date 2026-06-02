@@ -62,3 +62,28 @@
     });
   }
 })();
+
+// --- light / dark theme toggle (persisted) ---
+(function () {
+  var root = document.documentElement;
+  var KEY = 'csc-theme';
+  var btn = document.getElementById('themeToggle');
+
+  function apply(theme) {
+    if (theme === 'light') { root.setAttribute('data-theme', 'light'); }
+    else { root.removeAttribute('data-theme'); }
+    if (btn) { btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false'); }
+  }
+
+  var saved;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  apply(saved === 'light' ? 'light' : 'dark');
+
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      apply(next);
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+    });
+  }
+})();

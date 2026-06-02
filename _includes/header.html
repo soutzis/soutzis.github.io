@@ -1,15 +1,20 @@
 <header class="top">
   <div class="wrap nav">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="cyber-security.com.cy home">
-      {% include logo.html %}
+    <a class="brand brand-text" href="{{ '/' | relative_url }}" aria-label="cyber-security.com.cy home">
+      cyber-security<span class="logo-dim">.com</span><span class="logo-tld">.cy</span>
     </a>
-    <nav class="links" aria-label="Primary">
-      <a href="{{ '/' | relative_url }}#about">About</a>
-      <a href="{{ '/' | relative_url }}#services">Services</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      <a href="{{ '/' | relative_url }}#contact">Contact</a>
-    </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">MENU</button>
+    <div class="nav-right">
+      <nav class="links" aria-label="Primary">
+        <a href="{{ '/' | relative_url }}#about">About</a>
+        <a href="{{ '/' | relative_url }}#services">Services</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark theme">
+        <span class="ico-light" aria-hidden="true">&#9728;</span><span class="ico-dark" aria-hidden="true">&#9790;</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">MENU</button>
+    </div>
   </div>
 </header>
