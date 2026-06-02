@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Cyber Security Consulting
+title: cyber-security
 description: High quality cyber security consulting services, based in Cyprus.
 ---
