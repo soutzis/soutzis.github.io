@@ -134,7 +134,10 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,46px);lin
 .svc-toggle h3::after{content:"+";font-family:var(--mono);font-weight:400;font-size:21px;line-height:1;color:var(--signal);transition:transform .2s}
 .svc-toggle:hover h3::after,.svc-toggle:focus h3::after,.svc-toggle:focus-within h3::after{transform:rotate(45deg)}
 .js .svc-toggle p{max-height:0;opacity:0;overflow:hidden;margin:0;transition:max-height .35s ease,opacity .25s ease,margin-top .25s ease}
-.js .svc-toggle:hover p,.js .svc-toggle:focus p,.js .svc-toggle:focus-within p{max-height:280px;opacity:1;margin-top:12px}
+.js .svc-toggle:hover p,.js .svc-toggle:focus p,.js .svc-toggle:focus-within p{max-height:400px;opacity:1;margin-top:12px}
+/* expand every hovered/focused card to the same target height so all expanded boxes are uniform */
+.js .svc-toggle:hover,.js .svc-toggle:focus,.js .svc-toggle:focus-within{min-height:var(--svc-open-h,340px)}
+@media (min-width:900px){:root{--svc-open-h:300px}}
 
 /* products page */
 .aff-note{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line-2);background:var(--ink-2);padding:18px 20px;margin-top:26px}
