@@ -128,6 +128,22 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,4vw,46px);lin
 .svc::after{content:"";position:absolute;left:0;top:0;height:2px;width:0;background:var(--signal);transition:width .3s}
 .svc:hover::after{width:100%}
 
+/* click-to-reveal service descriptions (progressive enhancement) */
+.svc-toggle{outline-offset:-2px}
+.svc-toggle h3{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.svc-toggle h3::after{content:"+";font-family:var(--mono);font-weight:400;font-size:21px;line-height:1;color:var(--signal);transition:transform .2s}
+.svc-toggle:hover h3::after,.svc-toggle:focus h3::after,.svc-toggle:focus-within h3::after{transform:rotate(45deg)}
+.js .svc-toggle p{max-height:0;opacity:0;overflow:hidden;margin:0;transition:max-height .35s ease,opacity .25s ease,margin-top .25s ease}
+.js .svc-toggle:hover p,.js .svc-toggle:focus p,.js .svc-toggle:focus-within p{max-height:280px;opacity:1;margin-top:12px}
+
+/* products page */
+.aff-note{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line-2);background:var(--ink-2);padding:18px 20px;margin-top:26px}
+.aff-note .badge{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);border:1px solid var(--signal-dim);padding:6px 10px;white-space:nowrap}
+.aff-note p{color:var(--muted);font-size:16px;margin:0}
+.svc-go{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--signal)}
+.svc:hover .svc-go{text-decoration:none}
+@media(max-width:560px){.aff-note{flex-direction:column;gap:10px}}
+
 /* about */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
 .focus-list{list-style:none;margin-top:30px;border-top:1px solid var(--line)}
